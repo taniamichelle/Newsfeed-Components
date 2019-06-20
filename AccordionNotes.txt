@@ -1,0 +1,36 @@
+/*
+
+//addEventListener is a HOF that accepts an event type in the form of a string(which creates an object) and a callback
+
+//STEP 3: build out the panel base class(classes are hoisted)
+class Panel {
+  constructor(panel) {
+    this.panel = panel;
+    this.panelButtons = this.panel.querySelector('.panel-buttons');
+    this.panelBtnOpen = this.panel.querySelector('.panel-btn-open');
+    this.panelBtnClose = this.panel.querySelector('.panel-btn-close');
+     this.panelContent = this.panel.querySelector('.panel-content');
+       //EXPLICIT BINDING (in following line) of this keyword to the constructor so we can call them below
+    //this.panelButtons.addEventListener('click', this.togglePanel.bind(this));
+      //this is NOT bound to the arrow and therefore when used below in method it looks up and finds this keyword in the constructor
+    this.panelButtons.addEventListener('click', () => this.togglePanel());
+    }
+        //methods
+    togglePanel() {
+        //classList returns a DOM token list which has a method on it called toggle; don't need a dot in string b/c it can only be a class
+    this.panelBtnOpen.classList.toggle('hide-btn');
+    this.panelBtnClose.classList.toggle('hide-btn');
+        //referencing panelButtons ensures the toggle with click only occurs ON the button, not around it
+    this.panelContent.classList.toggle('toggle-on');
+    }
+};
+
+//STEP 1: get original DOM elements
+const panels = document.querySelectorAll('.panel');
+
+//STEP 2: return a newly constructed DOM element
+panels.forEach(function (panel) {
+    return new Panel(panel);
+});
+
+*/
