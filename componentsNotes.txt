@@ -1,0 +1,7 @@
+*******COMPONENTS*******
+-components: As we build larger and more feature-rich web pages, we may notice a trend in our code; 
+elements that are essentially using the same functionality and styling with minor differences in 
+the data they present. In an effort to keep our code readable, reusable, and most of all DRY, we can 
+build on these repeating patterns and create components. Components are reusable pieces of code that 
+can be used to build elements sharing functionality and styling. Components are the heart of any 
+dynamic web application and Javascript framework.
